@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Say To Moha
+    </title>
+    <link rel="icon"
+        href="https://assets.website-files.com/5d898ad5b4e4f742d9f7ba40/5d9a9fedc33c896b2582b7fc_SAY.Wordmark.RGB.Black.png"
+        type="image/png">
+    <meta charset="UTF-8">
+    <meta name="description" content="Say something to your friend Mohamed Sameh">
+    <meta name="author" content="Mohamed Sameh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-image {
+            background-image: url("background.jpg");
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .bg-text {
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script type="text/javascript">
+        function sendEmail() {
+            if (document.getElementById("message").value.length == 0) {
+                alert("Please, Write your message first.")
+            }
+            else {
+                Email.send({
+                    SecureToken: "46e9bcdd-807e-4c63-b150-955d000a70c4",
+                    To: 'samehmmm337@gmail.com',
+                    From: "samehmmm337@gmail.com",
+                    Subject: "Say To Moha " + document.getElementById("name").value,
+                    Body: document.getElementById("message").value,
+                })
+                    .then(function (message) {
+                        alert("Message sent successfully,Thanks")
+                    });
+            }
+        }
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(document).bind("contextmenu", function (e) {
+                e.preventDefault();
+                alert("We don't do that here. Search again how to do that ya bshmhnds");
+                return false;
+            });
+            $(document).keypress(function (e) {
+                if (e.which == 123) {
+                    e.preventDefault();
+                    alert("We don't do that here. Search again how to do that ya bshmhnds");
+                    return false;
+                }
+            });
+            $(document).keypress(function (e) {
+                if ((e.ctrlKey && e.altKey && e.key == "I") || (e.ctrlKey && e.altKey && e.key == "i")) {
+                    e.preventDefault();
+                    alert("We don't do that here. Search again how to do that ya bshmhnds");
+                    return false;
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="bg-image"></div>
+    <div class="bg-text">
+        <h1>Say To Moha</h1>
+        <p>Say Your message to Mohamed Sameh about anything happened through 2021</p>
+        <form method="post">
+            <input type="text" size="60" maxlength="60" class="data" id="name" placeholder="Your Name (optional)"
+                !required />
+            <input type="text" size="60" class="data" id="message" placeholder="Enter Your message to Mohamed Sameh"
+                required />
+            <input type="button" class="data" value="Send Email" onclick="sendEmail()" />
+        </form>
+    </div>
+</body>
+
+</html>
