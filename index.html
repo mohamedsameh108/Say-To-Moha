@@ -49,6 +49,16 @@
             padding: 20px;
             text-align: center;
         }
+
+         .inputs {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .data {
+            display: block;
+            margin: auto;
+        }
     </style>
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
@@ -104,11 +114,11 @@
         <h1>Say To Moha</h1>
         <p>Say Your message to Mohamed Sameh about anything happened through 2021</p>
         <form method="post">
-            <input type="text" size="60" maxlength="60" class="data" id="name" placeholder="Your Name (optional)"
-                !required />
-            <input type="text" size="60" class="data" id="message" placeholder="Enter Your message to Mohamed Sameh"
-                required />
-            <input type="button" class="data" value="Send Email" onclick="sendEmail()" />
+            <div class="inputs"><input type="text" size="60" maxlength="60" class="data" id="name" placeholder="Your Name (optional)"
+                !required /></div>
+            <div class="inputs"><input type="text" size="60" class="data" id="message" placeholder="Enter Your message to Mohamed Sameh"
+                required /></div>
+            <div class="inputs"><input type="button" class="data" value="Send Email" onclick="sendEmail()" /></div>
         </form>
     </div>
 </body>
