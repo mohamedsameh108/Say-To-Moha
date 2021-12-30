@@ -50,7 +50,7 @@
             text-align: center;
         }
 
-         .inputs {
+        .inputs {
             margin: 5px;
             padding: 5px;
         }
@@ -63,7 +63,7 @@
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
     <script type="text/javascript">
-        function sendEmail() {
+        function sendMessage() {
             if (document.getElementById("message").value.length == 0) {
                 alert("Please, Write your message first.")
             }
@@ -76,7 +76,7 @@
                     Body: document.getElementById("message").value,
                 })
                     .then(function (message) {
-                        alert("Message sent successfully,Thanks")
+                        alert("Message sent successfully.Thanks")
                     });
             }
         }
@@ -96,8 +96,6 @@
                     alert("We don't do that here. Search again how to do that ya bshmhnds");
                     return false;
                 }
-            });
-            $(document).keypress(function (e) {
                 if ((e.ctrlKey && e.altKey && e.key == "I") || (e.ctrlKey && e.altKey && e.key == "i")) {
                     e.preventDefault();
                     alert("We don't do that here. Search again how to do that ya bshmhnds");
@@ -114,13 +112,14 @@
         <h1>Say To Moha</h1>
         <p>Say Your message to Mohamed Sameh about anything happened through 2021</p>
         <form method="post">
-            <div class="inputs"><input type="text" maxlength="60" class="data" id="name" placeholder="Your Name (optional)"
-                !required /></div>
-            <div class="inputs"><input type="text" class="data" id="message" placeholder="Enter Your message to Mohamed Sameh"
-                required /></div>
-            <div class="inputs"><input type="button" class="data" value="Send Email" onclick="sendEmail()" /></div>
+            <div class="inputs"><input type="text" maxlength="60" class="data" id="name"
+                    placeholder="Your Name (optional)" !required /></div>
+            <div class="inputs"><input type="text" class="data" id="message"
+                    placeholder="Enter Your message to Mohamed Sameh" required /></div>
+            <div class="inputs"><input type="button" class="data" value="Send Message" onclick="sendMessage()" /></div>
         </form>
     </div>
 </body>
+
 
 </html>
