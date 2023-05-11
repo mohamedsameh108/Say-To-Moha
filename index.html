@@ -83,27 +83,7 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function () {
-            $(document).bind("contextmenu", function (e) {
-                e.preventDefault();
-                alert("We don't do that here. Search again how to do that ya bshmhnds");
-                return false;
-            });
-            $(document).keypress(function (e) {
-                if (e.which == 123) {
-                    e.preventDefault();
-                    alert("We don't do that here. Search again how to do that ya bshmhnds");
-                    return false;
-                }
-                if ((e.ctrlKey && e.altKey && e.key == "I") || (e.ctrlKey && e.altKey && e.key == "i")) {
-                    e.preventDefault();
-                    alert("We don't do that here. Search again how to do that ya bshmhnds");
-                    return false;
-                }
-            });
-        });
-    </script>
+    
 </head>
 
 <body>
